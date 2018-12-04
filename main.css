@@ -2,4 +2,12 @@
     margin: 25px;
     border-radius: 2px;
     padding: 20px;
+    height: 350px;
+    width: 350px;
 }
+
+body {
+    padding: 5%
+}
+
+#card-mdb {}
