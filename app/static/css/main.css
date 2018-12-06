@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+
+@font-face {
+    font-family: "RobotoMonoForPowerline-Medium";
+    src: url('../fonts/Roboto Mono Medium for Powerline.ttf') format("truetype");
+}
+
+.form_main {
+    width: 100%;
+    min-width: 1024px;
+    height: 100vh;
+    min-height: 1024px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    -webkit-text-size-adjust: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+div {
+    -webkit-text-size-adjust: none;
+}
+
+.form_main .search {
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 608px;
+    height: 100%;
+    pointer-events: auto;
+    position: relative;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.form_main .search-layout-container {
+    pointer-events: none;
+    flex-direction: column;
+    top: 48px;
+    align-items: center;
+    height: 58px;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    display: flex;
+    left: 0;
+}
+
+.form_main .search .searchbar {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0px;
+    height: 58px;
+    width: 608px;
+    position: absolute;
+    margin: 0;
+    left: 0px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.form_main .search .search_icon {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 13px;
+    height: 26px;
+    width: 34px;
+    position: absolute;
+    margin: 0;
+    left: 554px;
+    -ms-transform: rotate(16deg);
+    /* IE 9 */
+    -webkit-transform: rotate(16deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(16deg);
+    transition: all 0.2s ease-in-out;
+}
+
+.form_main .search .search_icon:hover {
+    transform: scale(1.1);
+}
+
+.form_main .search .text_box {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 12px;
+    height: 30px;
+    width: 507px;
+    position: absolute;
+    margin: 0;
+    left: 38px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    font-family: "RobotoMonoForPowerline-Medium", Helvetica, Arial, serif;
+    font-size: 20.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: left;
+    line-height: 24.0px;
+    border: 0;
+}
+
+.form_main .search .text_box::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form_main .messagecontainer {
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 956px;
+    height: 100%;
+    pointer-events: auto;
+    position: relative;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.form_main .messagecontainer-layout-container {
+    pointer-events: none;
+    flex-direction: column;
+    top: 135px;
+    align-items: center;
+    height: 181px;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    display: flex;
+    left: 0;
+}
+
+.form_main .messagecontainer .tweetcontainer {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0px;
+    height: 181px;
+    width: 956px;
+    position: absolute;
+    margin: 0;
+    left: 0px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.form_main .messagecontainer .date {
+    background-color: rgba(255, 255, 255, 0.0);
+    bottom: calc(0.00% + 15px);
+    height: auto;
+    width: 140px;
+    position: absolute;
+    margin: 0;
+    left: calc(0.00% + 22px);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    font-family: "Roboto", Helvetica, Arial, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14.0px;
+    color: rgba(47, 47, 47, 1.0);
+    text-align: justify;
+    line-height: 19.0px;
+}
+
+.form_main .messagecontainer .pic {
+    background-color: rgba(197, 197, 197, 1.0);
+    top: calc(0.00% + 22px);
+    height: 57px;
+    width: 58px;
+    position: absolute;
+    margin: 0;
+    left: calc(0.00% + 22px);
+    overflow: hidden;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.form_main .messagecontainer .pic .mask {
+    background-color: rgba(197, 197, 197, 1.0);
+    top: 0px;
+    height: 57px;
+    width: 58px;
+    position: absolute;
+    margin: 0;
+    left: 0px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.form_main .messagecontainer .pic .tweet_pic {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: -6px;
+    height: 70px;
+    width: 114px;
+    position: absolute;
+    margin: 0;
+    left: -31px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.form_main .messagecontainer .name {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: calc(0.00% + 22px);
+    height: auto;
+    width: 105px;
+    position: absolute;
+    margin: 0;
+    left: calc(0.00% + 98px);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    font-family: "Roboto", Helvetica, Arial, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20.0px;
+    color: rgba(47, 47, 47, 1.0);
+    text-align: left;
+    line-height: 26.0px;
+}
+
+.form_main .messagecontainer .username {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: calc(0.00% + 51px);
+    height: auto;
+    width: 87px;
+    position: absolute;
+    margin: 0;
+    left: calc(0.00% + 98px);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    font-family: "Roboto", Helvetica, Arial, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16.0px;
+    color: rgba(47, 47, 47, 1.0);
+    text-align: left;
+    line-height: 21.0px;
+}
+
+.form_main .messagecontainer .tweettext {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: calc(0.00% + 87px);
+    height: auto;
+    width: 871px;
+    position: absolute;
+    margin: 0;
+    left: calc(0.00% + 22px);
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    font-family: "Roboto", Helvetica, Arial, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14.0px;
+    color: rgba(47, 47, 47, 1.0);
+    text-align: justify;
+    line-height: 19.0px;
+}
