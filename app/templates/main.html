@@ -9,18 +9,25 @@
 </head>
 
 <body style="margin: 0;
- background: rgba(255, 255, 255, 1.0);">
-    <form action="form" class="form_main" method="post" name="form">
+ ">
+    <form action="/search" method="POST" class="form_main" method="post" name="form">
+
         <div class="search-layout-container">
-            <div class="search">
-                <img src="/static/images/bar.png" class="searchbar" />
-                <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjFnpm9rYvfAhWsdN8KHRZzCUgQPAgH" onclick="document.getElementsByName('form')[0].submit();">
-                    <img src="/static/images/mag.png" class="search_icon" />
-                </a>
-                <input class="text_box" name="textbox" placeholder="Make America Great Again" />
+            <div id="particles-js">
+                <div class="search">
+                    <img src="/static/images/bar.png" class="searchbar" />
+                    <a href="#" onclick="document.getElementsByName('form')[0].submit();">
+                        <img src="/static/images/mag.png" class="search_icon" />
+                    </a>
+                    <input class="text_box" id="srch-term" name="srch-term" placeholder="Search here" type="text"
+                        onkeypress="search(event)" />
+                </div>
             </div>
+
         </div>
-        <div class="messagecontainer-layout-container">
+
+
+        <!-- <div class="messagecontainer-layout-container">
             <div class="messagecontainer">
                 <img src="/static/images/container.png" class="tweetcontainer" />
                 <div class="date">
@@ -43,9 +50,20 @@
                     amet, consectetur adipiscing elit @twitter. #tweet #usa
                 </div>
             </div>
-        </div>
+        </div> -->
     </form>
 
+    <script>
+        function search(e) {
+            if (e.keyCode == 13) {
+                document.forms.form.submit();
+            } else {
+                return false;
+            }
+        }
+    </script>
+    <script src="/static/js/particles.min.js"></script>
+    <script src="/static/js/particleConfig.js"></script>
 </body>
 
 </html>
