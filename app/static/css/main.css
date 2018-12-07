@@ -45,8 +45,28 @@ div {
 
 transform: rotate(0deg);
 }
-
 */
+
+.logo {
+    position: absolute;
+    -webkit-transform: scale(0.6);
+    /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.6);
+    /* FF3.5+ */
+    -ms-transform: scale(0.6);
+    /* IE9 */
+    -o-transform: scale(0.6);
+    /* Opera 10.5+ */
+    transform: scale(0.6);
+    margin: auto;
+    overflow: auto;
+    top: calc(100% - 120%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
 .form_main .search {
     background-color: rgba(255, 255, 255, 0.0);
     position: absolute;
@@ -394,4 +414,5 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+    text-align: center;
 }

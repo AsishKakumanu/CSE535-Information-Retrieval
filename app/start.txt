@@ -10,6 +10,7 @@
 <meta name="viewport" content="width = device-width, initial-scale = 1">
 <title>Bootstrap Tutorial</title>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/uikit.min.css" type="text/css">
 <style>
 .jumbotron{
     background-color:#2E2D88;
@@ -29,10 +30,29 @@ p.letters {
     word-wrap: break-word;
     max-lines:3;
 }
+
+.searchtext {
+border-radius: 20px;
+text-indent: 10px
+}
+
+.main-div {
+text-align:center;
+margin:10px;
+}
+
+.form {
+width: calc(100% - 20%)
+}
 </style>
 
 </head>
 <body>
-		  Tweets Retrieval System
-<form action="/search" method="POST" name="f">
-		  <input type="text" name="srch-term" id="srch-term" class="form-control"
+		   <div class="main-div">
+            <div class="search uk-margin">
+                <form action="/search" method="POST" name="f" class="form uk-search uk-search-default">
+                    <a href="#" id="button" onclick="document.getElementsByName('f')[0].submit();" class="uk-search-icon-flip"
+                        uk-search-icon></a>
+                    <input class="searchtext uk-search-input form-control" type="search" name="srch-term" id="srch-term"
+                    onkeypress="search(event)"
+                        
