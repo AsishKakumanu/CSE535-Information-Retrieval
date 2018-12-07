@@ -12,45 +12,61 @@
     <title>Test</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/uikit.min.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/main.css" type="text/css">
-
     <style>
-        .jumbotron {
-background-color: #2E2D88;
-color: white;
-}
+        html,body{
+background-color: #fff;
+width : calc(100vw);
+height: calc(100vh);
+max-width: 99%;
+padding-left: 20px;
+        }
+        #data{
+            text-align : justify;
+            margin: 10px;
+        }
 
-/* Adds borders for tabs */
-.tab-content {
-border-left: 1px solid #ddd;
-border-right: 1px solid #ddd;
-border-bottom: 1px solid #ddd;
-padding: 10px;
-}
-
-.nav-tabs {
-margin-bottom: 0;
-}
-
-.letters {
-word-wrap: break-word;
-max-lines: 3;
-}
-
-.searchtext {
-border-radius: 20px;
-text-indent: 10px
-}
-
-.main-div {
-text-align: center;
+        #content{
+text-align : justify;
 margin: 10px;
-}
+        }
+        .jumbotron {
+        background-color: #2E2D88;
+        color: white;
+                    }
 
-.form {
-width: calc(100% - 20%)
-}
+        /* Adds borders for tabs */
+        .tab-content {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        }
+
+        .nav-tabs {
+        margin-bottom: 0;
+        }
+
+        .letters {
+        word-wrap: break-word;
+        max-lines: 3;
+        }
+
+        .searchtext {
+        border-radius: 20px;
+        text-indent: 10px
+        }
+
+        .main-div {
+        text-align: center;
+        margin: 15px;
+        margin-top: 25px;
+        }
+
+        .form {
+        width: calc(100% - 20%)
+        }
     </style>
+
 
 </head>
 
@@ -67,7 +83,7 @@ width: calc(100% - 20%)
         </div>
     </div>
     <br> <br> <br>
-    <div class="dropdown">
+    <!-- <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="true"> Languages <span class="caret"></span></button>
         <ul class="dropdown-menu">
@@ -77,31 +93,43 @@ width: calc(100% - 20%)
             <li><a href="#">Spanish</a></li>
             <li><a href="#">Thai</a></li>
         </ul>
-    </div>
-    <div id="data" style="float:left; width:30%;">
-        <a href={{data[2]}}>
-            <h3>{{data[0]}}</h3>
-        </a>
-        {{data[1]}}
-        <a href={{data[2]}}>Wikipedia</a>
-    </div>
-    <div id='content' style="float:right; width:70%; ">
-        {% for dict_item in range(3, data|length) %}
-        <div class='messagecontainer'>
-            {% for key, value in data[dict_item].items() %}
-            <div class="username">
-                {{value[1]}}
+    </div> -->
+    <div id="data" style="float:left; width:32%;">
+        <div class="uk-card uk-card-primary uk-card-hover uk-light" style="margin-bottom:20px; border-radius:15px;">
+            <div style="padding: 25px;">
+                <a href={{data[2]}}>
+                    <h3>{{data[0]}}</h3>
+                </a>
+                {{data[1]}}
+                <a href={{data[2]}}>Wikipedia</a>
             </div>
-            <div class="tweettext">
-                {{value[3]}}
+        </div>
+    </div>
+    <div id='content' style="float:right; width:65%; ">
+        <div>
+            {% for dict_item in range(3, data|length) %}
+            <div class='messagecontainer'>
+                {% for key, value in data[dict_item].items() %}
+                <div class="uk-card uk-card-small uk-card-default uk-card-hover" style="border-radius:15px;">
+                    <div style="padding: 15px;">
+                        <div class="username">
+                            {{value[1]}}
+                        </div>
+                        <div class="tweettext">
+                            {{value[3]}}
 
+                        </div>
+                        <div class="date">
+                            {{value[2]}}
+                        </div>
+                    </div>
+                </div><br><br>
+
+                {% endfor %}
             </div>
-            <div class="date">
-                {{value[2]}}
-            </div><br><br>
             {% endfor %}
         </div>
-        {% endfor %}
+
     </div>
     <script src="/static/js/uikit.min.js"></script>
     <script src="/static/js/uikit-icons.min.js"></script>
