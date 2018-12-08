@@ -65,13 +65,19 @@ margin: 10px;
         .form {
         width: calc(100% - 20%)
         }
+        .left{
+            float:left;width:11%;
+        }
+        .right{
+            margin-left: 11%;
+        }
     </style>
 
 
 </head>
 
 <body>
-
+    {{doc}}
     <div class="main-div">
         <div class="search uk-margin">
             <form action="/search" method="POST" name="f" class="form uk-search uk-search-default">
@@ -83,22 +89,28 @@ margin: 10px;
         </div>
     </div>
     <br> <br> <br>
-    <!-- <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true"> Languages <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">English</a></li>
-            <li><a href="#">Hindi</a></li>
-            <li><a href="#">French</a></li>
-            <li><a href="#">Spanish</a></li>
-            <li><a href="#">Thai</a></li>
-        </ul>
-    </div> -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,hi,th,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'data');
+        }
+    </script>
+    <!-- <select onchange="onLangSelect(this.value)">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="th">Thai</option>
+    </select> -->
     <div id="data" style="float:left; width:32%;">
         <div class="uk-card uk-card-primary uk-card-hover uk-light" style="margin-bottom:20px; border-radius:15px;">
-            <div style="padding: 25px;">
+            <div style="padding: 20px;">
                 <a href={{data[2]}}>
-                    <h3>{{data[0]}}</h3>
+                    <div style="font-size:25px; padding-bottom:5px;">{{data[0]}}</div>
                 </a>
                 {{data[1]}}
                 <a href={{data[2]}}>Wikipedia</a>
@@ -110,20 +122,27 @@ margin: 10px;
             {% for dict_item in range(3, data|length) %}
             <div class='messagecontainer'>
                 {% for key, value in data[dict_item].items() %}
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover" style="border-radius:15px;">
-                    <div style="padding: 15px;">
-                        <div class="username">
-                            {{value[1]}}
-                        </div>
-                        <div class="tweettext">
-                            {{value[3]}}
+                <div class="uk-card uk-card-small uk-card-default uk-card-hover" style="border-radius:15px;" id='right'>
+                    <div class="left" style="padding-left:20px;padding-top:20px;">
+                        <img src={{value[4]}} width="50" height="50" style="border-radius:50%;">
+                    </div>
+                    <div class="right">
+                        <div style="padding: 15px;">
 
-                        </div>
-                        <div class="date">
-                            {{value[2]}}
+                            <div class="username" style="font-size:17px; padding-bottom:5px;">
+                                {{ value[1] }}
+                            </div>
+
+                            <div class="tweettext">
+                                {{value[3]}}
+
+                            </div>
+                            <div class="date">
+                                {{value[2]}}
+                            </div>
                         </div>
                     </div>
-                </div><br><br>
+                </div><br>
 
                 {% endfor %}
             </div>
@@ -137,20 +156,19 @@ margin: 10px;
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en'
-            }, 'data');
-        }
-    </script>
+
     <script type="text/javascript">
         function onhashTagSelect(keyword) {
             document.getElementById("srch-term").value = keyword;
             document.forms.f.submit();
         }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function onLangSelect(language) {
+
+        }
+    </script>
+
     <script>
         function onEnter(e) {
             if ((e && e.keyCode == 13) || e == 0) {
@@ -161,7 +179,8 @@ margin: 10px;
     <script>
         function langSelect(e) {
             new google.translate.TranslateElement({
-                pageLanguage: 'en'
+                pageLanguage: 'en',
+                includedLanguages = 'es,th,hi'
             }, 'data');
         }
     </script>
