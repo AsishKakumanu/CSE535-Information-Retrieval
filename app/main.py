@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__,static_url_path='/static')
 
+# This is Home Route
 @app.route('/')
 def home():
     return render_template('main.html')
