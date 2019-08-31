@@ -11,11 +11,11 @@ from pytz import timezone as tz
 def load_api():
     ''' Function that loads the twitter API after authorizing the user. '''
 
-    consumer_key = 'XKCvkSC3TQDBJlLfaMJGbyuyT'
-    consumer_secret = 'kJ1siXeBh13GmwcrCYispF8eriDx7LQoIdMYfADodsG9neUe'
+    consumer_key = ''
+    consumer_secret = ''
 
-    access_token = '4808854766-2b02ddivk2dSwqgJgtg5JLDCN741tCN0Q26ax3a'
-    access_secret = 'laVPlvPitjdmlhXi0KorC9ODYa83XhAq98LyUAEC6EHkr'
+    access_token = ''
+    access_secret = ''
 
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
